@@ -42,11 +42,11 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
 }
 
 .logo {
-  max-height: 48px;
+  max-height: 98px;
 }
 
 .logo-text {
@@ -244,7 +244,64 @@ footer {
 }
 
 /* ======================
-   Services (CORREGIDO)
+   Galeria
+====================== */
+.gallery-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-subtitle {
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* Grid de miniaturas */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+
+/* ======================
+   Services
 ====================== */
 .services-header, h1 {
   text-align: center;

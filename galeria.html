@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería | Kico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <section class="gallery-section">
+    <h2>Galería</h2>
+    <p class="gallery-subtitle">
+      Momentos, presentaciones y proyectos musicales
+    </p>
+
+    <div class="gallery-grid">
+      <img src="img/Galeria/galeria0.jpg" alt="Momentos en vivo sobre el escenario" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria1.jpg" alt="Kico en presentación en vivo" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria2.jpg" alt="Show en vivo con banda" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria3.jpeg" alt="Teclado y música en plena acción" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria4.jpg" alt="Presentación nocturna en escenario" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria5.jpg" alt="Música en vivo durante evento" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria6.jpg" alt="Kico acompañando un evento musical" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria7.jpg" alt="Trabajo en estudio y ensayos" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria8.jpg" alt="Equipo de trabajo en el estudio" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria9.jpg" alt="Ensayo y preparación musical" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria10.jpg" alt="Compartiendo escenario con colegas" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria11.jpg" alt="Ambiente de concierto en vivo" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria12.jpeg" alt="Evento musical al aire libre" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria13.jpg" alt="Grupo listo para presentación" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria14.jpg" alt="Agrupación musical en evento especial" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria15.jpeg" alt="Ensayo general con el grupo" onclick="openLightbox(this)">
+      <img src="img/Galeria/galeria16.jpg" alt="Foto grupal después del show" onclick="openLightbox(this)">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- JS de la galería (SIEMPRE aquí) -->
+  <script src="js/galeria.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Abrir index.html en Edge",
+            "type": "msedge",
+            "request": "launch",
+            "file": "${workspaceFolder}/index.html",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+        }
+    ]
+}
+
