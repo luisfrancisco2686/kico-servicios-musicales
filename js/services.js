@@ -14,7 +14,7 @@ const defaultServices = [
     "Ajuste de tonalidad y estructura"
   ],
   price: "A convenir",
-  img: "img/servicio1.PNG"
+  img: "img/servicio1.png"
 }
 ,
   {
@@ -27,7 +27,7 @@ const defaultServices = [
     "Amplio repertorio musical"
   ],
   price: "A convenir",
-  img: "img/servicio2.PNG"
+  img: "img/servicio2.png"
 }
 ,
   {
@@ -40,7 +40,7 @@ const defaultServices = [
     "Formato digital listo para impresión"
   ],
   price: "A convenir",
-  img: "img/servicio3.PNG"
+  img: "img/servicio3.png"
 }
 ,
 {
@@ -53,7 +53,7 @@ const defaultServices = [
     "Equipos confiables y soporte técnico"
   ],
   price: "A convenir",
-  img: "img/servicio4.PNG"
+  img: "img/servicio4.png"
 }
 ,
   
