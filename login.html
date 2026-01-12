@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kico Servicios Musicales Profesionales - Login</title>
+  <title>Kico Professional Music Services - Login</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo-container">
-        <img src="img/logo.png" alt="Kico Servicios Musicales Profesionales Logo" class="logo">
-        <span class="logo-text">Servicios Musicales Profesionales</span>
+        <img src="img/logo.png" alt="Kico Professional Music Services Logo" class="logo">
+        <span class="logo-text">Professional Music Services</span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="galeria.html" class="active-link">Galeria</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contáctenos</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html" class="active-link">Gallery</a></li>
+        <li><a href="servicios.html">Services</a></li>
+        <li><a href="contacto.html">Contact Us</a></li>
         <li id="loginLink"><a href="login.html">Login</a></li>
         <li>
           <a href="carrito.html" class="carrito">
-            <img src="img/carrito.png" alt="Carrito" class="icono-carrito">
+            <img src="img/carrito.png" alt="Cart" class="icono-carrito">
             <span class="contador">0</span>
           </a>
         </li>
         <li id="adminMenu" style="display:none;">
-          <a href="admin-productos.html">Administrar productos</a>
+          <a href="admin-productos.html">Manage Products</a>
         </li>
       </ul>
     </nav>
@@ -35,15 +35,15 @@
   <main>
     <div class="login-container">
       <div class="login-form">
-        <h2>Iniciar Sesión</h2>
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" placeholder="ejemplo@correo.com" required>
-        <label for="password">Contraseña</label>
+        <h2>Log In</h2>
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="example@email.com" required>
+        <label for="password">Password</label>
         <input type="password" id="password" placeholder="********" required>
-        <button id="btnLogin">Ingresar</button>
-        <div id="errorMsg" class="extra" style="color:red; display:none;">Correo o contraseña incorrectos</div>
+        <button id="btnLogin">Sign In</button>
+        <div id="errorMsg" class="extra" style="color:red; display:none;">Incorrect email or password</div>
         <div class="extra">
-          <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+          <p>Don't have an account? <a href="register.html">Sign up here</a></p>
         </div>
       </div>
     </div>
@@ -53,11 +53,11 @@
   <footer>
     <div class="footer-container">
       <div class="footer-logo">
-        <img src="img/logofooter.png" alt="Kico Servicios Musicales Profesionales Logo">
+        <img src="img/logofooter.png" alt="Kico Professional Music Services Logo">
       </div>
       <div class="footer-info">
-        <p>© 2025 Kico – Servicios Musicales Profesionales</p>
-        <p>Arreglos | Piano | Transcripción | Sonido</p>
+        <p>© 2025 Kico – Professional Music Services</p>
+        <p>Arrangements | Piano | Transcription | Sound</p>
       </div>
       <div class="footer-social">
         <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
@@ -112,11 +112,11 @@
       logoutLink.style.display = "none";
     }
 
-    // Cerrar sesión
+    // Log out
     logoutLink.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("isAdmin");
-      window.location.href = "index.html"; // redirigir a inicio
+      window.location.href = "index.html"; // redirect to home
     });
   });
 </script>

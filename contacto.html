@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Kico Servicios Musicales Profesionales - Contáctenos</title>
+  <title>Kico Professional Music Services - Contact Us</title>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
@@ -13,67 +13,67 @@
     <nav class="navbar">
       <div class="logo-container">
         <img src="img/logo.png" alt="Novatech Logo" class="logo">
-        <span class="logo-text">Servicios Musicales Profesionales</span>
+        <span class="logo-text">Professional Music Services</span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="galeria.html" class="active-link">Galeria</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contáctenos</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html" class="active-link">Gallery</a></li>
+        <li><a href="servicios.html">Services</a></li>
+        <li><a href="contacto.html">Contact Us</a></li>
         <li id="loginLink"><a href="login.html">Login</a></li>
         <li>
           <a href="carrito.html" class="carrito">
-            <img src="img/carrito.png" alt="Carrito" class="icono-carrito">
+            <img src="img/carrito.png" alt="Cart" class="icono-carrito">
             <span class="contador">0</span>
           </a>
         </li>
         <li id="adminMenu" style="display:none;">
-          <a href="admin-productos.html">Administrar productos</a>
+          <a href="admin-productos.html">Manage Products</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1 class="contact-header">CONTACTENOS</h1>
+    <h1 class="contact-header">CONTACT US</h1>
 
     <section class="contact-form" id="contactBox">
       <form id="contactForm" novalidate>
-        <label for="nombres">Nombres</label>
+        <label for="nombres">First Name</label>
         <input id="nombres" name="nombres" required minlength="2" />
-        <div class="error" id="errNombres">Ingrese al menos 2 caracteres.</div>
+        <div class="error" id="errNombres">Enter at least 2 characters.</div>
 
-        <label for="apellidos">Apellidos</label>
+        <label for="apellidos">Last Name</label>
         <input id="apellidos" name="apellidos" required minlength="2" />
-        <div class="error" id="errApellidos">Ingrese al menos 2 caracteres.</div>
+        <div class="error" id="errApellidos">Enter at least 2 characters.</div>
 
         <label for="email">Email <span style="color:#ff6b6b">*</span></label>
         <input id="email" name="email" type="email" required />
-        <div class="error" id="errEmail">Ingrese un email válido (ej: ejemplo@dominio.com).</div>
+        <div class="error" id="errEmail">Enter a valid email (ex: example@domain.com).</div>
 
-        <label for="empresa">Empresa</label>
+        <label for="empresa">Company</label>
         <input id="empresa" name="empresa" />
 
-        <label for="pais">País de residencia</label>
+        <label for="pais">Country of residence</label>
         <select id="pais" name="pais" required>
-          <option value="">Selecciona...</option>
+          <option value="">Select...</option>
           <option>Colombia</option>
           <option>Argentina</option>
           <option>Chile</option>
-          <option>Perú</option>
-          <option>Otro</option>
+          <option>Peru</option>
+          <option>Other</option>
         </select>
-        <div class="error" id="errPais">Selecciona un país.</div>
+        <div class="error" id="errPais">Select a country.</div>
 
-        <label for="mensaje">Mensaje</label>
+        <label for="mensaje">Message</label>
         <textarea id="mensaje" name="mensaje" rows="6" minlength="1" required></textarea>
-        <div class="error" id="errMensaje">El mensaje está vacío.</div>
+        <div class="error" id="errMensaje">The message is empty.</div>
 
         <div style="display:flex;gap:12px;align-items:center;">
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-primary">Send</button>
         </div>
 
-        <div class="success" id="successMsg">Formulario válido. Revisa la acción seleccionada para enviar.</div>
+        <div class="success" id="successMsg">Valid form. Check the selected action to send.</div>
       </form>
     </section>
   </main>
@@ -85,8 +85,8 @@
         <img src="img/logofooter.png" alt="NOVATECH Logo">
       </div>
       <div class="footer-info">
-        <p>© 2025 Kico – Servicios Musicales Profesionales</p>
-        <p>Arreglos | Piano | Transcripción | Sonido</p>
+        <p>© 2025 Kico – Professional Music Services</p>
+        <p>Arrangements | Piano | Transcription | Sound</p>
       </div>
       <div class="footer-social">
         <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
@@ -99,7 +99,7 @@
 
   <script src="js/services.js"></script>
   <script>
-    initContactPage(); // Función de services.js
+    initContactPage(); // Function from services.js
   </script>
 </body>
 </html>

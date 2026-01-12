@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administrar Productos - Novatech</title>
+  <title>Manage Products - Novatech</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,22 +12,22 @@
     <nav class="navbar">
       <div class="logo-container">
         <img src="img/logo.png" alt="Novatech Logo" class="logo">
-        <span class="logo-text">Servicios Musicales Profesionales</span>
+        <span class="logo-text">Professional Music Services</span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="galeria.html" class="active-link">Galeria</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contáctenos</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html" class="active-link">Gallery</a></li>
+        <li><a href="servicios.html">Services</a></li>
+        <li><a href="contacto.html">Contact</a></li>
         <li id="loginLink"><a href="login.html">Login</a></li>
         <li>
           <a href="carrito.html" class="carrito">
-            <img src="img/carrito.png" alt="Carrito" class="icono-carrito">
+            <img src="img/carrito.png" alt="Cart" class="icono-carrito">
             <span class="contador">0</span>
           </a>
         </li>
         <li id="adminMenu" style="display:none;">
-          <a href="admin-productos.html">Administrar productos</a>
+          <a href="admin-productos.html">Manage products</a>
         </li>
       </ul>
     </nav>
@@ -36,162 +36,163 @@
 
   <main class="admin-container">
     <div class="admin-form">
-      <h2>Administrar Productos</h2>
-      <button class="btn btn-primary">Agregar nuevo producto</button>
+      <h2>Manage Products</h2>
+      <button class="btn btn-primary">Add new product</button>
     </div>
 
     <table class="admin-table">
       <thead>
         <tr>
           <th>ID</th>
-          <th>Imagen</th>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Existencias</th>
-          <th>Acciones</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <!-- Servicio 1 -->
+
+        <!-- Service 1 -->
         <tr>
           <td>1</td>
-          <td><img src="img/servicio1.png" alt="Servicio 1" width="80"></td>
-          <td>Servicio 1</td>
+          <td><img src="img/servicio1.png" alt="Service 1" width="80"></td>
+          <td>Service 1</td>
           <td>$100</td>
           <td>15</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="1"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="1"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="1"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="1"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="1"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="1"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 2 -->
+        <!-- Service 2 -->
         <tr>
           <td>2</td>
-          <td><img src="img/servicio2.png" alt="Servicio 2" width="80"></td>
-          <td>Servicio 2</td>
+          <td><img src="img/servicio2.png" alt="Service 2" width="80"></td>
+          <td>Service 2</td>
           <td>$120</td>
           <td>20</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="2"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="2"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="2"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="2"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="2"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="2"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 3 -->
+        <!-- Service 3 -->
         <tr>
           <td>3</td>
-          <td><img src="img/servicio3.png" alt="Servicio 3" width="80"></td>
-          <td>Servicio 3</td>
+          <td><img src="img/servicio3.png" alt="Service 3" width="80"></td>
+          <td>Service 3</td>
           <td>$85</td>
           <td>39</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="3"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="3"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="3"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="3"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="3"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="3"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 4 -->
+        <!-- Service 4 -->
         <tr>
           <td>4</td>
-          <td><img src="img/servicio4.png" alt="Servicio 4" width="80"></td>
-          <td>Servicio 4</td>
+          <td><img src="img/servicio4.png" alt="Service 4" width="80"></td>
+          <td>Service 4</td>
           <td>$90</td>
           <td>10</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="4"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="4"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="4"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="4"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="4"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="4"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 5 -->
+        <!-- Service 5 -->
         <tr>
           <td>5</td>
-          <td><img src="img/servicio5.png" alt="Servicio 5" width="80"></td>
-          <td>Servicio 5</td>
+          <td><img src="img/servicio5.png" alt="Service 5" width="80"></td>
+          <td>Service 5</td>
           <td>$60</td>
           <td>25</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="5"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="5"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="5"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="5"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="5"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="5"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 6 -->
+        <!-- Service 6 -->
         <tr>
           <td>6</td>
-          <td><img src="img/servicio6.png" alt="Servicio 6" width="80"></td>
-          <td>Servicio 6</td>
+          <td><img src="img/servicio6.png" alt="Service 6" width="80"></td>
+          <td>Service 6</td>
           <td>$45</td>
           <td>18</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="6"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="6"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="6"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="6"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="6"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="6"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 7 -->
+        <!-- Service 7 -->
         <tr>
           <td>7</td>
-          <td><img src="img/servicio7.png" alt="Servicio 7" width="80"></td>
-          <td>Servicio 7</td>
+          <td><img src="img/servicio7.png" alt="Service 7" width="80"></td>
+          <td>Service 7</td>
           <td>$75</td>
           <td>30</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="7"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="7"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="7"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="7"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="7"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="7"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 8 -->
+        <!-- Service 8 -->
         <tr>
           <td>8</td>
-          <td><img src="img/servicio8.png" alt="Servicio 8" width="80"></td>
-          <td>Servicio 8</td>
+          <td><img src="img/servicio8.png" alt="Service 8" width="80"></td>
+          <td>Service 8</td>
           <td>$150</td>
           <td>12</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="8"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="8"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="8"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="8"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="8"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="8"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
 
-        <!-- Servicio 9 -->
+        <!-- Service 9 -->
         <tr>
           <td>9</td>
-          <td><img src="img/servicio9.png" alt="Servicio 9" width="80"></td>
-          <td>Servicio 9</td>
+          <td><img src="img/servicio9.png" alt="Service 9" width="80"></td>
+          <td>Service 9</td>
           <td>$200</td>
           <td>7</td>
           <td>
             <div class="table-actions">
-              <button class="btn btn-info btn-view" data-id="9"><i class="fas fa-eye"></i> Ver</button>
-              <button class="btn btn-success btn-edit" data-id="9"><i class="fas fa-edit"></i> Modificar</button>
-              <button class="btn btn-danger btn-delete" data-id="9"><i class="fas fa-trash"></i> Eliminar</button>
+              <button class="btn btn-info btn-view" data-id="9"><i class="fas fa-eye"></i> View</button>
+              <button class="btn btn-success btn-edit" data-id="9"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger btn-delete" data-id="9"><i class="fas fa-trash"></i> Delete</button>
             </div>
           </td>
         </tr>
@@ -199,29 +200,29 @@
     </table>
 
     <div class="admin-form">
-      <h3>Crear Producto</h3>
+      <h3>Create Product</h3>
       <form>
-        <label for="nombre">Nombre</label>
+        <label for="nombre">Name</label>
         <input type="text" id="nombre" name="nombre">
 
-        <label for="descripcion">Descripción breve</label>
+        <label for="descripcion">Short description</label>
         <textarea id="descripcion" name="descripcion"></textarea>
 
-        <label for="caracteristicas">Características (separadas por ;)</label>
-        <input type="text" id="caracteristicas" name="caracteristicas" placeholder="Carac1;Carac2;Carac3">
+        <label for="caracteristicas">Features (separated by ;)</label>
+        <input type="text" id="caracteristicas" name="caracteristicas" placeholder="Feat1;Feat2;Feat3">
 
-        <label for="precio">Precio</label>
+        <label for="precio">Price</label>
         <input type="number" id="precio" name="precio">
 
-        <label for="existencias">Existencias</label>
+        <label for="existencias">Stock</label>
         <input type="number" id="existencias" name="existencias">
 
-        <label for="imagen">Nombre de archivo de imagen</label>
-        <input type="text" id="imagen" name="imagen" placeholder="ejemplo.png">
+        <label for="imagen">Image file name</label>
+        <input type="text" id="imagen" name="imagen" placeholder="example.png">
 
         <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Guardar</button>
-          <button type="reset" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
       </form>
     </div>
@@ -229,42 +230,10 @@
 
   <footer>
       <div class="footer-info">
-        <p>© 2025 Kico – Servicios Musicales Profesionales</p>
-        <p>Arreglos | Piano | Transcripción | Sonido</p>
+        <p>© 2025 Kico – Professional Music Services</p>
+        <p>Arrangements | Piano | Transcription | Sound</p>
       </div>
   </footer>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("isAdmin") === "true") {
-      document.getElementById("adminMenu").style.display = "block";
-      document.getElementById("loginLink").style.display = "none";
-    }
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const isAdmin = localStorage.getItem("isAdmin") === "true";
-    const loginLink = document.getElementById("loginLink");
-    const logoutLink = document.getElementById("logoutLink");
-    const adminMenu = document.getElementById("adminMenu");
 
-    if (isAdmin) {
-      adminMenu.style.display = "block";
-      loginLink.style.display = "none";
-      logoutLink.style.display = "block";
-    } else {
-      adminMenu.style.display = "none";
-      loginLink.style.display = "block";
-      logoutLink.style.display = "none";
-    }
-
-    // Cerrar sesión
-    logoutLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      localStorage.removeItem("isAdmin");
-      window.location.href = "index.html"; // redirigir a inicio
-    });
-  });
-</script>
 </body>
 </html>

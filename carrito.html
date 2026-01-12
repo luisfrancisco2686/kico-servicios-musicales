@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito | Kico Servicios Musicales Profesionales</title>
+  <title>Cart | Kico Professional Music Services</title>
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -15,18 +15,18 @@
     <nav class="navbar">
       <div class="logo-container">
         <img src="img/logo.png" alt="Kico Logo" class="logo">
-        <span class="logo-text">Servicios Musicales Profesionales</span>
+        <span class="logo-text">Professional Music Services</span>
       </div>
 
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="galeria.html" class="active-link">Galeria</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html" class="active-link">Gallery</a></li>
+        <li><a href="servicios.html">Services</a></li>
+        <li><a href="contacto.html">Contact</a></li>
 
         <li>
           <a href="carrito.html" class="carrito">
-            <img src="img/carrito.png" alt="Carrito" class="icono-carrito">
+            <img src="img/carrito.png" alt="Cart" class="icono-carrito">
             <span class="contador">0</span>
           </a>
         </li>
@@ -34,32 +34,32 @@
     </nav>
   </header>
 
-  <!-- Contenido principal -->
+  <!-- Main content -->
   <main class="container">
-    <h1>🛒 Carrito de Servicios</h1>
+    <h1>🛒 Service Cart</h1>
 
     <section id="cart-items">
-      <!-- Servicios agregados dinámicamente -->
+      <!-- Services added dynamically -->
     </section>
 
     <section id="cart-summary">
-      <h2>Resumen del pedido</h2>
-      <p>Total: <strong><span id="cart-total">A convenir</span></strong></p>
+      <h2>Order summary</h2>
+      <p>Total: <strong><span id="cart-total">To be agreed</span></strong></p>
 
       <form id="order-form">
-        <label for="nombre">Tu nombre</label>
+        <label for="nombre">Your name</label>
         <input type="text" id="nombre" required>
 
-        <label for="correo">Correo electrónico</label>
+        <label for="correo">Email address</label>
         <input type="email" id="correo" required>
 
-        <label for="direccion">Dirección / Observaciones</label>
+        <label for="direccion">Address / Notes</label>
         <input type="text" id="direccion" required>
 
-        <label for="pedido">Detalle del pedido</label>
+        <label for="pedido">Order details</label>
         <textarea id="pedido" readonly></textarea>
 
-        <button type="submit" class="btn">Enviar pedido</button>
+        <button type="submit" class="btn">Send order</button>
       </form>
 
       <p id="msg"></p>
@@ -69,13 +69,13 @@
   <!-- Footer -->
   <footer>
     <div class="footer-info">
-      <p>© 2025 Kico – Servicios Musicales Profesionales</p>
-      <p>Arreglos | Piano | Transcripción | Sonido</p>
+      <p>© 2025 Kico – Professional Music Services</p>
+      <p>Arrangements | Piano | Transcription | Sound</p>
     </div>
   </footer>
 
   <!-- ======================
-        JS DEL CARRITO
+        CART JS
        ====================== -->
   <script>
     const CART_KEY = 'novatech_cart_v1';
@@ -89,12 +89,12 @@
     const cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
     const services = JSON.parse(localStorage.getItem(SERVICES_KEY)) || [];
 
-    // Actualizar contador del header
+    // Update header counter
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
     contadorEls.forEach(el => el.textContent = totalItems);
 
     if (cart.length === 0) {
-      cartContainer.innerHTML = "<p>No tienes servicios en tu carrito.</p>";
+      cartContainer.innerHTML = "<p>You have no services in your cart.</p>";
       pedidoTextarea.value = "";
     } else {
       cartContainer.innerHTML = "";
@@ -109,23 +109,23 @@
         div.innerHTML = `
           <p>
             <strong>${service.name}</strong><br>
-            Cantidad: ${item.quantity}<br>
-            Precio: A convenir
+            Quantity: ${item.quantity}<br>
+            Price: To be agreed
           </p>
         `;
         cartContainer.appendChild(div);
 
-        pedidoDetalle += `${service.name} x${item.quantity} - A convenir\n`;
+        pedidoDetalle += `${service.name} x${item.quantity} - To be agreed\n`;
       });
 
       pedidoTextarea.value = pedidoDetalle;
     }
 
-    // Simulación de envío (sin backend)
+    // Send simulation (no backend)
     document.getElementById("order-form").addEventListener("submit", (e) => {
       e.preventDefault();
       document.getElementById("msg").textContent =
-        "✅ Pedido enviado correctamente. Nos pondremos en contacto contigo.";
+        "✅ Order sent successfully. We will contact you shortly.";
       
       localStorage.removeItem(CART_KEY);
       setTimeout(() => {
