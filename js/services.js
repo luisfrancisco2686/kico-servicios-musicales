@@ -2,64 +2,63 @@
 const DEFAULT_SERVICES_KEY = 'novatech_services_v1';
 const CART_KEY = 'novatech_cart_v1';
 
-// Servicios por defecto
+// Default services
 const defaultServices = [
 {
   id: 1,
-  name: "Arreglos Musicales",
-  description: "Arreglos musicales personalizados que realzan tu proyecto, adaptados al estilo, formato y nivel de cada agrupación.",
+  name: "Musical Arrangements",
+  description: "Custom musical arrangements that enhance your project, adapted to the style, format, and level of each group.",
   features: [
-    "Adaptación a diferentes estilos musicales",
-    "Arreglos para coros, bandas y ensambles",
-    "Ajuste de tonalidad y estructura"
+    "Adaptation to different musical styles",
+    "Arrangements for choirs, bands, and ensembles",
+    "Key and structure adjustments"
   ],
-  price: "A convenir",
+  price: "To be agreed",
   img: "img/servicio1.png"
 }
 ,
-  {
+{
   id: 2,
-  name: "Piano Profesional",
-  description: "Servicio de pianista profesional para eventos, grabaciones y presentaciones en vivo, con interpretación musical de alta calidad.",
+  name: "Professional Piano",
+  description: "Professional pianist service for events, recordings, and live performances with high-quality musical interpretation.",
   features: [
-    "Eventos sociales y corporativos",
-    "Acompañamiento a solistas y agrupaciones",
-    "Amplio repertorio musical"
+    "Social and corporate events",
+    "Accompaniment for soloists and groups",
+    "Wide musical repertoire"
   ],
-  price: "A convenir",
+  price: "To be agreed",
   img: "img/servicio2.png"
 }
 ,
-  {
+{
   id: 3,
-  name: "Transcripción de Partituras",
-  description: "Transcripción precisa de audio a partitura, ideal para músicos, estudiantes y agrupaciones que buscan claridad musical.",
+  name: "Sheet Music Transcription",
+  description: "Accurate audio-to-sheet transcription, ideal for musicians, students, and groups seeking musical clarity.",
   features: [
-    "Audio a partitura",
-    "Leadsheets y partituras completas",
-    "Formato digital listo para impresión"
+    "Audio to sheet music",
+    "Leadsheets and full scores",
+    "Digital format ready for printing"
   ],
-  price: "A convenir",
+  price: "To be agreed",
   img: "img/servicio3.png"
 }
 ,
 {
   id: 4,
-  name: "Servicio de Sonido",
-  description: "Servicio de sonido profesional para eventos, garantizando una experiencia auditiva clara y equilibrada.",
+  name: "Sound Service",
+  description: "Professional sound service for events, ensuring a clear and balanced listening experience.",
   features: [
-    "Montaje y operación de sonido",
-    "Eventos musicales y sociales",
-    "Equipos confiables y soporte técnico"
+    "Sound setup and operation",
+    "Musical and social events",
+    "Reliable equipment and technical support"
   ],
-  price: "A convenir",
+  price: "To be agreed",
   img: "img/servicio4.png"
 }
 ,
-  
 ];
 
-// Funciones de storage
+// Storage functions
 function readServices() {
   let services = JSON.parse(localStorage.getItem(DEFAULT_SERVICES_KEY));
   if (!services || !Array.isArray(services) || services.length === 0) {
@@ -68,12 +67,11 @@ function readServices() {
     return services;
   }
 
-  // Merge: si hay servicios guardados pero les faltan campos, los completamos desde defaultServices
   services = services.map(s => {
     const def = defaultServices.find(d => d.id === s.id) || {};
     return {
       id: s.id ?? def.id,
-      name: s.name ?? def.name ?? 'Servicio',
+      name: s.name ?? def.name ?? 'Service',
       description: s.description ?? def.description ?? '',
       features: s.features ?? def.features ?? [],
       price: s.price ?? def.price ?? 0,
@@ -106,13 +104,13 @@ function addToCart(serviceId, quantity) {
   updateCartCountUI();
 }
 
-// Actualiza contador de carrito
+// Update cart counter
 function updateCartCountUI() {
   const count = readCart().reduce((acc, item) => acc + item.quantity, 0);
   document.querySelectorAll(".contador").forEach(el => el.textContent = count);
 }
 
-// Inicializa la página de servicios
+// Initialize services page
 function initServicesPage() {
   const services = readServices();
   const grid = document.getElementById("servicesGrid");
@@ -127,7 +125,6 @@ function initServicesPage() {
   const addToCartBtn = document.getElementById("addToCart");
   const closeModalBtn = document.getElementById("closeModal");
 
-  // Inyecta servicios
   grid.innerHTML = "";
   services.forEach(s => {
     const card = document.createElement("div");
@@ -142,7 +139,7 @@ function initServicesPage() {
     card.addEventListener("click", () => {
       modalImg.src = s.img;
       modalTitle.textContent = s.name;
-      modalSubtitle.textContent = "Plan empresarial";
+      modalSubtitle.textContent = "Business plan";
       modalFeatures.innerHTML = "<ul>" + s.features.map(f => `<li>${f}</li>`).join("") + "</ul>";
       modalPrice.textContent = `$${s.price.toLocaleString()}`;
       modalStock.textContent = s.stock;
@@ -152,7 +149,7 @@ function initServicesPage() {
       addToCartBtn.onclick = () => {
         addToCart(s.id, parseInt(modalQty.value));
         overlay.classList.remove("active");
-        alert("Producto agregado al carrito!");
+        alert("Product added to cart!");
       };
     });
     grid.appendChild(card);
@@ -164,23 +161,18 @@ function initServicesPage() {
   updateCartCountUI();
 }
 
-
-// Inicializa funciones dependiendo de la página actual
 document.addEventListener("DOMContentLoaded", () => {
-  // Si la página tiene la sección de servicios
   if (document.getElementById("servicesGrid")) {
     initServicesPage();
   }
 
-  // Si la página tiene el formulario de contacto
   if (document.getElementById("contactForm")) {
     initContactPage();
   }
-
 });
 
 // ======================
-//   CONTACTO
+//   CONTACT
 // ======================
 function initContactPage() {
   const form = document.getElementById('contactForm');
@@ -240,16 +232,16 @@ function initContactPage() {
       const result = await response.json();
 
       if (result.success) {
-        successMsg.textContent = '✅ Mensaje enviado correctamente. Gracias por contactarnos.';
+        successMsg.textContent = '✅ Message sent successfully. Thank you for contacting us.';
         show(successMsg);
         form.reset();
       } else {
-        successMsg.textContent = '❌ Error al enviar el mensaje: ' + (result.message || '');
+        successMsg.textContent = '❌ Error sending message: ' + (result.message || '');
         show(successMsg);
       }
     } catch (error) {
-      console.error('Error de red:', error);
-      successMsg.textContent = '❌ No se pudo conectar con el servidor. Verifica tu conexión.';
+      console.error('Network error:', error);
+      successMsg.textContent = '❌ Unable to connect to the server. Check your connection.';
       show(successMsg);
     }
   });
