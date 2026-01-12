@@ -757,3 +757,56 @@ h1 {
     text-align: center;
   }
 }
+
+/* ======================
+   TITULOS UNIFICADOS
+====================== */
+
+/* Título principal de cada página */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0 25px;
+  color: #0078a3;
+  letter-spacing: 1px;
+}
+
+/* Subtítulos generales */
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #5a2ec9;
+}
+
+/* Ajustes específicos (sin romper diseño) */
+
+/* Galería */
+.gallery-section h2 {
+  font-size: 2rem;
+  color: #0078a3;
+}
+
+/* Servicios */
+.services-header {
+  margin-top: 40px;
+}
+
+/* Contacto */
+.contact-form h2 {
+  color: #5a2ec9;
+}
+
+/* Login */
+.login-form h2 {
+  color: #5a2ec9;
+}
+
+/* Carrito */
+#cart-summary h2 {
+  text-align: left;
+  font-size: 1.4rem;
+}
+
